@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #f9b64d;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.header-title {
+    margin-right: auto;
+	color: #fff
+}
+
+.header-links {
+    margin-right: 20px;
+	color: #fff
+}
+
+.header-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+	color: #fff
+}
+
+#connectButton {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+#connectButton:hover {
+  transform: scale(1.1);
+}
+
+/* Content */
+.content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+  margin-top: 5%;
+}
+
+.content h1 {
+  text-align: center;
+}
+
+.content input[type="file"],
+.content button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.content button {
+  background: #333;
+  color: #fff;
+}
+
+.content button:hover {
+  background: var(--primary-color);
+}
+
+/* Image Container */
+#image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imageItem {
+  margin: 10px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+/* Align links and Metamask button to the right */
+.top-section .header-links {
+  margin-left: auto;
+}
+
+.top-section #connectButton {
+  margin-left: 1rem;
+}
+.upload-box {
+    background-color: orange;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto 5% auto; /* Center horizontally */
+    margin-top: 50px; /* Adjust vertical margin for positioning */
+    max-width: 50%; /* Set max width for the box */
+}
+
+.upload-box input[type="file"],
+.upload-box button {
+    margin-top: 10px;
+}

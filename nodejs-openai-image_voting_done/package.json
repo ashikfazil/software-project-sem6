@@ -1,0 +1,31 @@
+{
+  "name": "nodejs-openapi-image",
+  "version": "1.0.0",
+  "description": "Generate images using OpenAI",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "keywords": [],
+  "author": "Brad Traversy",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.11.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.5.0",
+    "knex": "^3.1.0",
+    "openai": "^3.1.0",
+    "openzeppelin-solidity": "^2.2.0",
+    "solc": "^0.8.25",
+    "web3": "^4.8.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.2",
+    "nodemon": "^2.0.20"
+  }
+}

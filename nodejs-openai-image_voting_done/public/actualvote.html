@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Cloud Website</title>
+    <!-- Include Firebase SDK using CDN link -->
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-storage-compat.js"></script>
+    <!-- Include Web3 library -->
+    <script src='https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js'></script>
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/vote.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">The Voting Application</h1>
+        <div class="header-links">
+            <a href="index.html">Generate</a>
+            <a href="https://beta.openai.com/docs" target="_blank">API Docs</a>
+            <a href="price_index.html">Live Prices</a>
+        </div>
+        <button id='connectButton'>Connect to Metamask</button>
+    </header>
+    
+    <div class="content">
+        <div class="upload-box">
+            <input type="file" id="fileInput" accept="image/*">
+            <textarea id="descriptionInput" placeholder="Enter image description"></textarea> <!-- Added textarea for description -->
+            <button onclick="uploadImage()">Upload Image</button>
+        </div>
+        <div id="image-container"></div>
+    </div>
+
+    <!-- Include vote.js script -->
+    <script src="js/vote.js"></script>
+
+    <!-- JavaScript for Metamask connection -->
+    <script>
+        document.getElementById('connectButton').addEventListener('click', async () => {
+            if (window.ethereum) {
+                const web3 = new Web3(window.ethereum);
+                await window.ethereum.request({ method: 'eth_requestAccounts' });
+                const accounts = await web3.eth.getAccounts();
+                
+                // Update button color and text content
+                const connectButton = document.getElementById('connectButton');
+                connectButton.style.backgroundColor = 'green';
+                connectButton.innerText = 'Connected';
+    
+                // Update connected account content
+                document.getElementById('connectedAccount').innerText = accounts[0];
+                // Show popup
+                alert(`Successfully connected to Metamask account number: ${accounts[0]}`);
+            } else {
+                alert('Please download Metamask');
+            }
+        });
+    </script>
+    
+</body>
+</html>

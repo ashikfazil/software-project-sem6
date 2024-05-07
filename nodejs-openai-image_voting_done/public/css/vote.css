@@ -1,0 +1,64 @@
+.imageContainer {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 30%; /* Set width to 30% of the screen */
+    box-sizing: border-box; /* Include padding and border in the width */
+    float: left; /* Float the containers side by side */
+}
+
+.imageContainer img {
+    max-width: 100%; /* Ensure image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline images from having extra space below */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.poll-question {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.poll-form label {
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.poll-form button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.results {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+
+.results-title {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.results-count p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.results-count .count {
+    font-weight: bold;
+}
